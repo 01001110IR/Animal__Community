@@ -8,31 +8,99 @@
     <link rel="stylesheet" href="menu.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    <style>
+        /* Custom CSS for mobile and iPad */
+        @media (max-width: 500px) {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            ul li {
+                padding: 5px;
+            }
+
+            /* Adjust font size for mobile and iPad */
+            a {
+                font-size: 14px;
+            }
+
+            /* Adjust iframe height for better display on small screens */
+            iframe {
+                height: 400px;
+            }
+
+            /* Adjust footer styles for mobile and iPad */
+            #footer {
+                text-align: center;
+                padding: 10px;
+                background-color:#0087da;
+                height:1000px;
+            }
+        }
+
+        /* Footer styles for larger screens */
+        @media (min-width: 501px) {
+            #footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                background-color:#010101;
+                padding: 10px;
+            }
+
+            ul, li {
+                box-sizing: border-box;
+            }
+        }
+        
+        /* Additional CSS for controlling page height */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        
+        /* Limit page height to 100% */
+        body {
+            min-height: 100%;
+        }
+        
+        /* Set the footer size to be small and thin */
+        #footer {
+            padding: 10px;
+            height: auto;
+        }
+        
+        /* Increase font size for the "Join our community" button */
+        #footer .btn {
+            font-size: 20px;
+            border-width: 10px;
+            border-color: rgb(246, 255, 0);
+        }
+    </style>
 </head>
 
 <body>
     <ul>
         <li><a class="active" target="main" onclick="window.location.reload()">Home</a></li>
         <li><a href="lion.html" target="main"><strong>LION</strong></a></li>
-        <li><a href="shark.html" target="main"><STRONG>SHARK</STRONG></a></li>
-
-        <li><a href="dog.html" target="main"><STRONG>DOG</STRONG></a></li>
-        <li><a href="aboutzoo.html" target="main"><STRONG>ABOUT</STRONG></a></li>
+        <li><a href="shark.html" target="main"><strong>SHARK</strong></a></li>
+        <li><a href="dog.html" target="main"><strong>DOG</strong></a></li>
+        <li><a href="aboutzoo.html" target="main"><strong>ABOUT</strong></a></li>
     </ul>
     <iframe name="main" src="https://www.sciencedirect.com/topics/earth-and-planetary-sciences/animal-community"
-        width="100%" height="800px" frameborder="0" allowfullscreen></iframe>
-    <br>
-    <footer>
-        <div id="footer" style="padding: 20px; background-color: #9dc0d6;">
-            <a href="https://twitter.com/sciencedirect" class="btn btn-outline-warning">Join our community!</a>
+        width="100%" height="1000px" frameborder="0" allowfullscreen></iframe>
+    <hr>
+    <footer id="footer">
+        <div>
+            <a href="https://twitter.com/sciencedirect" class="btn btn-outline-warning"><strong> Join to our community!</strong></a>
             <img src="https://www.suchtv.pk/media/k2/items/cache/c456eb89ce18445545ce8dc5d5aa4153_XL.jpg?t=20230724_105631"
-                width="60px" height="60px" alt="">
+                width="100px" height="80px" alt="">
         </div>
     </footer>
-
 </body>
 
 </html>
